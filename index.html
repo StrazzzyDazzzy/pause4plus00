@@ -156,12 +156,12 @@
   .vision-wave-line:nth-child(6){opacity:0.33;}
   .vision-wave-line:nth-child(7){opacity:0.26;}
   .vision-wave-line:nth-child(8){opacity:0.2;}}
-</style>
+.back-to-top{position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;text-decoration:none;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s ease,transform .3s ease,visibility .3s ease;z-index:9999;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer;border:none;}.back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0);}.back-to-top:hover{background:var(--accent);}</style>
 </head>
-<body>
+<body><button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 <nav>
   <div class="wrap">
-    <div class="brand"><a href="#" style="display:flex;align-items:center;"><img src="pause4plus-logo.png" alt="Pause 4 Plus" style="height:24px;width:auto;display:block;"></a></div>
+    <div class="brand"><a href="#" id="navLogo" style="display:flex;align-items:center;"><img src="pause4plus-logo.png" alt="Pause 4 Plus" style="height:24px;width:auto;display:block;"></a></div>
     <ul>
       <li><a href="#story">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -313,7 +313,7 @@
   </div>
 </footer>
 
-</body>
+<script>(function(){var btt=document.getElementById('backToTop');var logo=document.getElementById('navLogo');function toggleBtn(){if(window.scrollY>400){btt.classList.add('visible');}else{btt.classList.remove('visible');}}window.addEventListener('scroll',toggleBtn);toggleBtn();btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});if(logo){logo.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});}})();</script></body>
 </html>
 
 <!-- v2 -->
